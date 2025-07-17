@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tripti Tiwari | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+  <style>
+    body {
+      font-family: 'Montserrat', 'Roboto', sans-serif;
+      background-color: #000 !important;
+      color: #f8f9fa;
+      transition: background 0.3s, color 0.3s;
+    }
+    .navbar, .bg-white, .bg-light {
+      background-color: #000 !important;
+    }
+    .navbar .navbar-brand, .navbar .nav-link, .section-title, .card, .card-title, .tagline, .list-unstyled, .blog-placeholder, .chatbot-placeholder, .footer, .resume-btn {
+      color: #f8f9fa !important;
+    }
+    .profile-img {
+      width: 220px;
+      height: 220px;
+      object-fit: contain;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+      background: #222;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .profile-img-3d {
+      width: 220px;
+      height: 220px;
+      object-fit: contain;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+      background: #222;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      /* Add 3D effect */
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 1.5px 8px #6f42c1;
+      transform: perspective(600px) rotateY(-8deg) scale(1.05);
+      transition: transform 0.4s;
+    }
+    .profile-img-3d:hover {
+      transform: perspective(600px) rotateY(8deg) scale(1.1);
+    }
+    .tagline {
+      font-size: 1.2rem;
+      color: #6c757d;
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.5px;
+    }
+    .project-card {
+      border-radius: 1rem;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      transition: transform 0.2s;
+    }
+    .project-card:hover {
+      transform: translateY(-6px) scale(1.02);
+    }
+    .resume-btn {
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      background: #6f42c1;
+      border: none;
+    }
+    .resume-btn:hover {
+      background: #4b286d;
+    }
+    .github-link {
+      color: #f8f9fa;
+      font-size: 1.5rem;
+      margin-left: 0.5rem;
+      transition: color 0.2s;
+    }
+    .github-link:hover {
+      color: #6f42c1;
+    }
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s, transform 0.7s;
+    }
+    .scroll-animate.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .dark-mode {
+      --bs-body-bg: #181a1b;
+      --bs-body-color: #f8f9fa;
+      --bs-card-bg: #23272b;
+      --bs-card-color: #f8f9fa;
+    }
+    .light-mode {
+      --bs-body-bg: #f8f9fa;
+      --bs-body-color: #181a1b;
+      --bs-card-bg: #fff;
+      --bs-card-color: #181a1b;
+    }
+    .card {
+      background: #181a1b !important;
+      color: #f8f9fa !important;
+    }
+    .contact-form input, .contact-form textarea {
+      background: #181a1b !important;
+      color: #f8f9fa !important;
+      border: 1px solid #444;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+      border-color: #6f42c1;
+      box-shadow: 0 0 0 0.2rem rgba(111,66,193,.15);
+    }
+    .blog-placeholder {
+      color: #adb5bd;
+      font-style: italic;
+    }
+    .chatbot-placeholder {
+      color: #adb5bd;
+      font-style: italic;
+      text-align: center;
+      padding: 2rem 0;
+    }
+    @media (max-width: 767px) {
+      .section-title { font-size: 1.5rem; }
+      .profile-img, .profile-img-3d { width: 140px; height: 140px; }
+    }
+  </style>
+</head>
+<body class="light-mode">
+  <!-- 3D Abstract Background -->
+  <div style="position:fixed;z-index:0;top:0;left:0;width:100vw;height:100vh;overflow:hidden;pointer-events:none;">
+    <svg width="100%" height="100%" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg" style="min-height:100vh;">
+      <defs>
+        <radialGradient id="mesh1" cx="30%" cy="30%" r="60%">
+          <stop offset="0%" stop-color="#a18cd1" stop-opacity="0.7"/>
+          <stop offset="100%" stop-color="#000" stop-opacity="0.0"/>
+        </radialGradient>
+        <radialGradient id="mesh2" cx="70%" cy="70%" r="60%">
+          <stop offset="0%" stop-color="#fbc2eb" stop-opacity="0.5"/>
+          <stop offset="100%" stop-color="#000" stop-opacity="0.0"/>
+        </radialGradient>
+        <radialGradient id="mesh3" cx="80%" cy="20%" r="50%">
+          <stop offset="0%" stop-color="#fad0c4" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#000" stop-opacity="0.0"/>
+        </radialGradient>
+        <radialGradient id="mesh4" cx="20%" cy="80%" r="50%">
+          <stop offset="0%" stop-color="#8fd3f4" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="#000" stop-opacity="0.0"/>
+        </radialGradient>
+        <filter id="blurMesh" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="90"/>
+        </filter>
+      </defs>
+      <ellipse cx="400" cy="250" rx="500" ry="300" fill="url(#mesh1)" filter="url(#blurMesh)"/>
+      <ellipse cx="1100" cy="700" rx="400" ry="250" fill="url(#mesh2)" filter="url(#blurMesh)"/>
+      <ellipse cx="1200" cy="200" rx="300" ry="180" fill="url(#mesh3)" filter="url(#blurMesh)"/>
+      <ellipse cx="300" cy="800" rx="350" ry="180" fill="url(#mesh4)" filter="url(#blurMesh)"/>
+    </svg>
+  </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">Tripti Tiwari</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blogs">Blogs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <button id="modeToggle" class="btn btn-outline-secondary ms-3" title="Toggle light/dark mode">
+          <span id="modeIcon" class="bi bi-moon"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="py-5 text-center bg-light">
+    <div class="container">
+      <!-- 3D Image Placeholder -->
+      <div>
+        <img src="tripti-photo.jpg" alt="Tripti Tiwari Photo" class="profile-img-3d mb-3" id="profile3d">
+      </div>
+      <!-- Photo uploaded by user -->
+      <h1 class="fw-bold mb-2">Tripti Tiwari</h1>
+      <div class="tagline mb-3">MERN Developer | Embedded Systems Enthusiast | AI Innovator</div>
+      <a href="https://github.com/tttriptti" target="_blank" class="github-link" title="GitHub"><i class="bi bi-github"></i> GitHub</a>
+      <div class="mt-4">
+        <a href="#" class="btn btn-primary resume-btn" download>Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container scroll-animate">
+      <div class="section-title">About Me</div>
+      <p>
+        I am a final-year B.Tech student in Electronics and Communication Engineering at MANIT Bhopal (CGPA: 8.91). With a strong foundation in Data Structures & Algorithms and Machine Learning, I have excelled in national hackathons and built impactful projects in MERN stack, embedded systems, and AI. My passion lies in solving real-world problems through technology and innovation.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-5 bg-light">
+    <div class="container scroll-animate">
+      <div class="section-title">Projects</div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">LeetMetric</h5>
+              <div class="mb-2"><span class="badge bg-secondary">ReactJS</span> <span class="badge bg-secondary">Node.js</span> <span class="badge bg-secondary">Charts</span></div>
+              <ul>
+                <li>Real-time LeetCode tracker for 2K+ problems</li>
+              </ul>
+              <a href="#" class="btn btn-outline-primary btn-sm mt-2" target="_blank">View Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Rise Up Platform</h5>
+              <div class="mb-2"><span class="badge bg-secondary">MERN</span> <span class="badge bg-secondary">Google Gemini API</span></div>
+              <ul>
+                <li>AI interview bot + skill modules</li>
+              </ul>
+              <a href="#" class="btn btn-outline-primary btn-sm mt-2" target="_blank">View Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">ANN-Based RUL Estimation</h5>
+              <div class="mb-2"><span class="badge bg-secondary">TensorFlow</span> <span class="badge bg-secondary">Streamlit</span></div>
+              <ul>
+                <li>Jet engine failure prediction using NASA dataset</li>
+              </ul>
+              <a href="#" class="btn btn-outline-primary btn-sm mt-2" target="_blank">View Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- GitHub dynamic section placeholder -->
+      <div class="mt-4">
+        <h6>Highlighted GitHub Projects</h6>
+        <div class="blog-placeholder">(Dynamic GitHub project highlights will appear here)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-5">
+    <div class="container scroll-animate">
+      <div class="section-title">Experience & Internships</div>
+      <ul>
+        <li><strong>DRDO:</strong> Optimized embedded IDEs for missile systems</li>
+        <li><strong>UBS Hackathon Finalist:</strong> Built Rise Up app</li>
+        <li><strong>SPARC – IIT Hyderabad:</strong> VLSI and chip architecture training</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-5 bg-light">
+    <div class="container scroll-animate">
+      <div class="section-title">Skills</div>
+      <div class="row">
+        <div class="col-md-4">
+          <h6>Programming</h6>
+          <ul>
+            <li>C, C++</li>
+            <li>JavaScript</li>
+            <li>HTML/CSS</li>
+            <li>Python</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6>Technologies</h6>
+          <ul>
+            <li>ReactJS, Node.js</li>
+            <li>TensorFlow</li>
+            <li>MySQL, DBMS</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6>Concepts</h6>
+          <ul>
+            <li>OS, CN, OOP</li>
+            <li>DSA, ML</li>
+            <li>System Design</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="py-5">
+    <div class="container scroll-animate">
+      <div class="section-title">Achievements</div>
+      <ul>
+        <li>UBS Hackathon Finalist</li>
+        <li>Google Girl Hackathon Semi-Finalist (Top 10%)</li>
+        <li>3rd in Make-A-Thon 2024 (IoT Project)</li>
+        <li>Best Minor Project Award – TechnoSearch 2025</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Blogs Section -->
+  <section id="blogs" class="py-5 bg-light">
+    <div class="container scroll-animate">
+      <div class="section-title">Blogs</div>
+      <div class="blog-placeholder">No blogs yet. Stay tuned for future posts!</div>
+    </div>
+  </section>
+
+  <!-- Chatbot Section (Placeholder) -->
+  <section id="chatbot" class="py-5">
+    <div class="container chatbot-placeholder">
+      <div class="section-title">Chatbot</div>
+      <div>(A chatbot for FAQs will be available here soon!)</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container scroll-animate">
+      <div class="section-title">Contact</div>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <ul class="list-unstyled">
+            <li><strong>Email:</strong> <a href="mailto:triptitiwari679@gmail.com">triptitiwari679@gmail.com</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+917905802775">+91 7905802775</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <form class="contact-form">
+            <div class="mb-2">
+              <input type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="mb-2">
+              <input type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="mb-2">
+              <textarea class="form-control" rows="3" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-white text-center border-top">
+    <div class="container">
+      <small>&copy; 2024 Tripti Tiwari. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS & Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script>
+    // Light/Dark mode toggle
+    const modeToggle = document.getElementById('modeToggle');
+    const modeIcon = document.getElementById('modeIcon');
+    const body = document.body;
+    modeToggle.addEventListener('click', () => {
+      if (body.classList.contains('light-mode')) {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        modeIcon.classList.remove('bi-moon');
+        modeIcon.classList.add('bi-sun');
+      } else {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        modeIcon.classList.remove('bi-sun');
+        modeIcon.classList.add('bi-moon');
+      }
+    });
+
+    // Animated scroll effects
+    function revealOnScroll() {
+      const elements = document.querySelectorAll('.scroll-animate');
+      const windowHeight = window.innerHeight;
+      elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < windowHeight - 60) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+</body>
+</html> 
