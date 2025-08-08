@@ -35,11 +35,10 @@
     .profile-img-3d {
       width: 220px;
       height: 220px;
-      object-fit: contain;
+      object-fit: cover;
       border-radius: 50%;
       border: 4px solid #fff;
       box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-      background: #222;
       display: block;
       margin-left: auto;
       margin-right: auto;
@@ -199,11 +198,14 @@
     <div class="container">
       <!-- 3D Image Placeholder -->
       <div>
-        <img src="tripti-photo.jpg" alt="Tripti Tiwari Photo" class="profile-img-3d mb-3" id="profile3d">
+        <img src="tripti phtoto.jpeg" alt="Tripti Tiwari Photo" class="profile-img-3d mb-3" id="profile3d" onerror="this.style.display='none'; document.getElementById('photoError').style.display='block';">
+        <div id="photoError" style="display:none; color: #ffc107; font-weight: bold; margin-bottom: 1rem;">
+          Photo not found. Please ensure 'tripti phtoto.jpeg' is in the same folder as index.html
+        </div>
       </div>
       <!-- Photo uploaded by user -->
       <h1 class="fw-bold mb-2">Tripti Tiwari</h1>
-      <div class="tagline mb-3">MERN Developer | Embedded Systems Enthusiast | AI Innovator</div>
+      <div class="tagline mb-3">MERN Developer | Deep Learning Enthusiast | AI Innovator</div>
       <a href="https://github.com/tttriptti" target="_blank" class="github-link" title="GitHub"><i class="bi bi-github"></i> GitHub</a>
       <div class="mt-4">
         <a href="#" class="btn btn-primary resume-btn" download>Download Resume</a>
@@ -216,8 +218,16 @@
     <div class="container scroll-animate">
       <div class="section-title">About Me</div>
       <p>
-        I am a final-year B.Tech student in Electronics and Communication Engineering at MANIT Bhopal (CGPA: 8.91). With a strong foundation in Data Structures & Algorithms and Machine Learning, I have excelled in national hackathons and built impactful projects in MERN stack, embedded systems, and AI. My passion lies in solving real-world problems through technology and innovation.
+        I am a final-year B.Tech student in Electronics and Communication Engineering at Maulana Azad National Institute of Technology, Bhopal (CGPA: 8.91). With a strong foundation in Data Structures & Algorithms and Machine Learning, I have excelled in national hackathons and built impactful projects in MERN stack and AI. Currently learning Deep Learning, Cloud Computing, and System Design. My passion lies in solving real-world problems through technology and innovation.
       </p>
+      <div class="mt-4">
+        <h6><strong>Education:</strong></h6>
+        <ul>
+          <li><strong>B.Tech Electronics & Communication Engineering</strong> - Maulana Azad National Institute of Technology, Bhopal (2022-Present) - CGPA: 8.91</li>
+          <li><strong>CBSE 12th PC M</strong> - Lions School, Mirzapur (2021-2022) - Percentage: 96%</li>
+          <li><strong>CBSE 10th</strong> - Lions School, Mirzapur (2019-2020) - Percentage: 96%</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -229,12 +239,15 @@
         <div class="col-md-4">
           <div class="card project-card h-100">
             <div class="card-body">
-              <h5 class="card-title">LeetMetric</h5>
-              <div class="mb-2"><span class="badge bg-secondary">ReactJS</span> <span class="badge bg-secondary">Node.js</span> <span class="badge bg-secondary">Charts</span></div>
+              <h5 class="card-title">ResumeXpert</h5>
+              <div class="mb-2"><span class="badge bg-secondary">MERN Stack</span> <span class="badge bg-secondary">JWT</span> <span class="badge bg-secondary">jsPDF</span></div>
               <ul>
-                <li>Real-time LeetCode tracker for 2K+ problems</li>
+                <li>Mobile-friendly resume builder with 3 templates</li>
+                <li>JWT authentication (login/signup) and form progress tracking</li>
+                <li>Integrated jsPDF for resume downloads and React-Toastify/Feather Icons</li>
+                <li>Responsive layouts with real-time previews</li>
               </ul>
-              <a href="#" class="btn btn-outline-primary btn-sm mt-2" target="_blank">View Code</a>
+              <a href="https://github.com/tttriptti/ResumeXpert-" target="_blank" class="btn btn-outline-primary btn-sm mt-2">View Code</a>
             </div>
           </div>
         </div>
@@ -242,11 +255,14 @@
           <div class="card project-card h-100">
             <div class="card-body">
               <h5 class="card-title">Rise Up Platform</h5>
-              <div class="mb-2"><span class="badge bg-secondary">MERN</span> <span class="badge bg-secondary">Google Gemini API</span></div>
+              <div class="mb-2"><span class="badge bg-secondary">MERN</span> <span class="badge bg-secondary">ReactJS</span> <span class="badge bg-secondary">Node.js</span></div>
               <ul>
-                <li>AI interview bot + skill modules</li>
+                <li>Full-stack web application supporting 3 language options</li>
+                <li>10+ learning modules and 15+ job listings</li>
+                <li>Chatbot interviewer for mock interviews</li>
+                <li>UBS Hackathon Finalist project</li>
               </ul>
-              <a href="#" class="btn btn-outline-primary btn-sm mt-2" target="_blank">View Code</a>
+              <a href="https://github.com/tttriptti" target="_blank" class="btn btn-outline-primary btn-sm mt-2">View Code</a>
             </div>
           </div>
         </div>
@@ -254,11 +270,29 @@
           <div class="card project-card h-100">
             <div class="card-body">
               <h5 class="card-title">ANN-Based RUL Estimation</h5>
-              <div class="mb-2"><span class="badge bg-secondary">TensorFlow</span> <span class="badge bg-secondary">Streamlit</span></div>
+              <div class="mb-2"><span class="badge bg-secondary">TensorFlow</span> <span class="badge bg-secondary">Streamlit</span> <span class="badge bg-secondary">NASA Dataset</span></div>
               <ul>
-                <li>Jet engine failure prediction using NASA dataset</li>
+                <li>Artificial neural network using NASA's C-MAPSS dataset</li>
+                <li>85% accuracy in predicting RUL of turbofan engines</li>
+                <li>Real-time Streamlit web interface for sensor input</li>
+                <li>Predictive alerts with 60% scheduling efficiency</li>
               </ul>
-              <a href="#" class="btn btn-outline-primary btn-sm mt-2" target="_blank">View Code</a>
+              <a href="https://github.com/tttriptti/RUL-ESTIMATION-" target="_blank" class="btn btn-outline-primary btn-sm mt-2">View Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">LeetMetric</h5>
+              <div class="mb-2"><span class="badge bg-secondary">ReactJS</span> <span class="badge bg-secondary">Node.js</span> <span class="badge bg-secondary">Charts</span></div>
+              <ul>
+                <li>Real-time LeetCode tracker for 2K+ problems</li>
+                <li>Interactive dashboard with progress visualization</li>
+                <li>Problem difficulty tracking and statistics</li>
+                <li>Performance analytics and goal setting</li>
+              </ul>
+              <a href="https://github.com/tttriptti" target="_blank" class="btn btn-outline-primary btn-sm mt-2">View Code</a>
             </div>
           </div>
         </div>
@@ -276,9 +310,9 @@
     <div class="container scroll-animate">
       <div class="section-title">Experience & Internships</div>
       <ul>
-        <li><strong>DRDO:</strong> Optimized embedded IDEs for missile systems</li>
-        <li><strong>UBS Hackathon Finalist:</strong> Built Rise Up app</li>
-        <li><strong>SPARC – IIT Hyderabad:</strong> VLSI and chip architecture training</li>
+        <li><strong>Union Bank of Switzerland (UBS) Hackathon, Pune – Finalist (Apr 2025):</strong> Engaged in 24-hour national level hackathon with 100+ participants. Developed "Rise-Up" web application using MERN stack, implemented skilling modules and job board enabling access to 15+ employment opportunities.</li>
+        <li><strong>SPARC – IIT Hyderabad (Dec 2024):</strong> Completed 40 hours hands-on training in VLSI design flow, semiconductor fabrication, & cleanroom handling. Collaborated with 5+ experts from Taiwan on process-level VLSI challenges and chip-level architecture analysis.</li>
+        <li><strong>Defense Research and Development Organization (DRDO), Hyderabad (Dec 2024):</strong> Enhanced missile system performance by refining software integration processes, leading to 20% decrease in system boot-up time. Improved software compatibility by 90% by refactoring code across 3 embedded subsystems.</li>
       </ul>
     </div>
   </section>
@@ -289,28 +323,30 @@
       <div class="section-title">Skills</div>
       <div class="row">
         <div class="col-md-4">
-          <h6>Programming</h6>
+          <h6>Programming Languages</h6>
           <ul>
             <li>C, C++</li>
+            <li>Assembly (8085/8086)</li>
+            <li>HTML, CSS</li>
             <li>JavaScript</li>
-            <li>HTML/CSS</li>
-            <li>Python</li>
           </ul>
         </div>
         <div class="col-md-4">
-          <h6>Technologies</h6>
+          <h6>Core Skills</h6>
           <ul>
-            <li>ReactJS, Node.js</li>
-            <li>TensorFlow</li>
+            <li>Data Structures & Algorithms</li>
+            <li>OOP, OS, Machine Learning</li>
+            <li>Computer Networks</li>
+            <li>Web Development</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6>Technologies & Interests</h6>
+          <ul>
+            <li>ReactJS, Node.js, MongoDB</li>
             <li>MySQL, DBMS</li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h6>Concepts</h6>
-          <ul>
-            <li>OS, CN, OOP</li>
-            <li>DSA, ML</li>
-            <li>System Design</li>
+            <li>IoT, AI, Deep Learning</li>
+            <li>Cyber Security</li>
           </ul>
         </div>
       </div>
@@ -322,15 +358,15 @@
     <div class="container scroll-animate">
       <div class="section-title">Achievements</div>
       <ul>
-        <li>UBS Hackathon Finalist</li>
-        <li>Google Girl Hackathon Semi-Finalist (Top 10%)</li>
-        <li>3rd in Make-A-Thon 2024 (IoT Project)</li>
-        <li>Best Minor Project Award – TechnoSearch 2025</li>
+        <li><strong>UBS Hackathon Finalist</strong> - National level hackathon with 100+ participants</li>
+        <li><strong>Google Girl Hackathon Semi-Finalist</strong> - Ranked in top 10% nationwide</li>
+        <li><strong>3rd in Make-A-Thon 2024</strong> - IoT-based smart system prototype</li>
+        <li><strong>Best Minor Project Award</strong> - TechnoSearch 2025 among 40+ departments</li>
       </ul>
     </div>
   </section>
 
-  <!-- Blogs Section -->
+  <!-- Blogs Section (Placeholder) -->
   <section id="blogs" class="py-5 bg-light">
     <div class="container scroll-animate">
       <div class="section-title">Blogs</div>
@@ -385,7 +421,49 @@
   <!-- Bootstrap JS & Icons -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
+    // Initialize EmailJS
+    (function() {
+      emailjs.init("YOUR_EMAILJS_PUBLIC_KEY"); // You'll need to replace this with your actual EmailJS public key
+    })();
+
+    // Contact form handling
+    document.addEventListener('DOMContentLoaded', function() {
+      const contactForm = document.querySelector('.contact-form');
+      
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        // Get form data
+        const formData = {
+          from_name: contactForm.querySelector('input[type="text"]').value,
+          from_email: contactForm.querySelector('input[type="email"]').value,
+          message: contactForm.querySelector('textarea').value,
+          to_email: 'triptitiwari679@gmail.com'
+        };
+        
+        // Send email using EmailJS
+        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+          .then(function(response) {
+            alert('Message sent successfully! I will get back to you soon.');
+            contactForm.reset();
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+          }, function(error) {
+            alert('Failed to send message. Please try again or email me directly at triptitiwari679@gmail.com');
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+          });
+      });
+    });
+
     // Light/Dark mode toggle
     const modeToggle = document.getElementById('modeToggle');
     const modeIcon = document.getElementById('modeIcon');
